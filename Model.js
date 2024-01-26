@@ -1,28 +1,32 @@
 'use strict';
 class Model{
   constructor(){
-   this.unsplash={
+   this.apiNinjas={
     applicaitonId : 557954,
-    accessKey: 'ITVhbSudRz73f0zvepdLyFWTWxx41FWMXvKvN8TIWx4',      
-   }
-   this.page=1;   
+    accessKey: 'blYELrc4zv9VqBxaE/PoEw==Nb75KVlcIWup27Su',          
+   };
+   this.joke = '';
+   
+   
    
   }
+  
 
-  async fetchPhotos(query){
-    let request =  `https://api.unsplash.com/search/photos/?client_id=${this.unsplash.accessKey}&query=${query}&page=${this.page}`;
-    // let request =  `Testing/response.json`;
-    // console.log(request);
-    // return;
-    // console.log(request);    
+  async fetchJoke(){
+    let url =  `https://api.api-ninjas.com/v1/dadjokes`; 
     try{
-      let response = await fetch(request);
+      let response = await fetch(url, {
+        method: "GET",
+        headers: { 
+          'X-Api-Key': this.apiNinjas.accessKey,
+          "Content-Type": "application/json",
+        },
+      });
       let jsonResponse = await response.json();
-      let {results} = jsonResponse;
-      // console.log(results);
-      // incrementing page number
-      ++this.page;
-      return results;      
+      // console.log(jsonResponse);
+      let [{joke}] = jsonResponse;
+      // console.log('result is', results);
+      return joke;      
 
     }catch(error){
       console.error('Alex21C-ERROR: Unable to load content from API.', error);

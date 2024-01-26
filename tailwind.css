@@ -544,24 +544,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
 
 .sticky {
   position: sticky;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
 }
 
 .top-0 {
@@ -572,60 +560,32 @@ video {
   z-index: 40;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
 }
 
-.block {
-  display: block;
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-\[-2rem\] {
+  margin-top: -2rem;
 }
 
 .flex {
   display: flex;
 }
 
-.grid {
-  display: grid;
+.h-\[15rem\] {
+  height: 15rem;
 }
 
-.h-64 {
-  height: 16rem;
+.w-\[20rem\] {
+  width: 20rem;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
-.h-\[100\%\] {
-  height: 100%;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-\[100\%\] {
-  width: 100%;
-}
-
-.w-\[30rem\] {
-  width: 30rem;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[95\%\] {
-  width: 95%;
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-full {
@@ -634,10 +594,6 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -656,14 +612,6 @@ video {
   gap: 0.5rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-y-0 {
-  row-gap: 0px;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -677,9 +625,9 @@ video {
   background-color: rgb(4 120 87 / var(--tw-bg-opacity));
 }
 
-.bg-slate-400 {
+.bg-slate-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-slate-500 {
@@ -692,46 +640,25 @@ video {
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
-.bg-slate-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-20 {
-  padding: 5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
+.pl-7 {
+  padding-left: 1.75rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pr-\[11rem\] {
-  padding-right: 11rem;
+.pr-7 {
+  padding-right: 1.75rem;
 }
 
 .pt-3 {
@@ -742,9 +669,18 @@ video {
   text-align: center;
 }
 
+.font-\[itim\] {
+  font-family: itim;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-5xl {
@@ -752,37 +688,17 @@ video {
   line-height: 1;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.font-medium {
-  font-weight: 500;
+.font-normal {
+  font-weight: 400;
 }
 
 .font-semibold {
   font-weight: 600;
 }
 
-.text-red-500 {
+.text-slate-700 {
   --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
-.text-slate-300 {
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity));
+  color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
 .text-zinc-50 {
@@ -794,18 +710,10 @@ video {
   text-decoration-line: underline;
 }
 
-.opacity-80 {
-  opacity: 0.8;
-}
-
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 /* 
@@ -845,210 +753,54 @@ h1{
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width:1880px){
-  div#divLightBox{
-    padding:0;
-    padding-top: 6rem;
+@media screen and (max-width:768px){
+  h1 span.assignmentTitle{
+    font-size: 2.5rem;
   }
 
-  div#wrapperImgAndCloseBtn{
-    width:95%;
-    display: flex;
-    justify-content: center;
-  }
-
-  button#btnCloseLightBox{
-    padding-right: 7rem;
-  }
-}
-
-@media screen and (max-width:1280px){
-  div#divResults{
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-}
-
-@media screen and (max-width:1156px){
-  button#btnCloseLightBox{
-    padding-right: 5rem;
-  }
-}
-
-@media screen and (max-width:958px){
-  button#btnCloseLightBox{
-    padding-right: 2rem;
-    font-size: 3rem;
-  }
-
-  div#wrapperImgAndCloseBtn{
-    height: 100vh;
-  }
-
-  div#wrapperImgAndCloseBtn img{
-    width: 100%;
-    /* object-fit: cover; */
-  }
-}
-
-@media screen and (max-width:880px){
-  div#divResults{
-    grid-template-columns:  30rem;
-    row-gap: 0rem;
-  }
-
-  div#divResults div.wrapperImgAndDescription{
-    width: 30rem;
-    height: 30rem;
-  }
-
-  div#divResults div.wrapperImg{
-    width: 30rem;
-    height: 26rem;
-  }
-
-  div#divResults div.wrapperImg img{
-    width:100%;
-    height: 100%;
-  }
-}
-
-@media screen and (max-width:618px){
-  form.wrapperSearchAndBtn{
-    flex-direction: column;
-    gap:.5rem;
-    padding:1rem 2rem;
-  }
-
-  form.wrapperSearchAndBtn input,
-  form.wrapperSearchAndBtn button{
-    padding:1rem;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:532px){
-  div#divResults div.wrapperImgAndDescription{
-    width: 25rem;
-    height: 25rem;
-  }
-
-  div#divResults div.wrapperImg{
-    width: 25rem;
-    height: 22rem;
-  }
-
-  div#divResults{
-    padding: 0;
-    grid-template-columns:  25rem;
-  }
-}
-
-@media screen and (max-width:430px){
-  button#btnCloseLightBox{
-    padding-right: 1rem;
-  }
-
-  div#divResults div.wrapperImgAndDescription{
-    width: 20rem;
-    height: 20rem;
-  }
-
-  div#divResults div.wrapperImg{
-    width: 20rem;
-    height: 19rem;
-  }
-
-  div#divResults{
-    padding: 0;
-    grid-template-columns:  20rem;
-    row-gap: 2rem;
-  }
-
-  header.wrapperForm{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  h1#topHeading{
+  h1 a.geeksterPromo{
     font-size: 1.5rem;
   }
+}
 
-  h1#topHeading a{
+@media screen and (max-width:530px){
+  h1 span.assignmentTitle{
+    font-size: 2.3rem;
+  }
+
+  h1 a.geeksterPromo{
+    font-size: 1.3rem;
+  }
+
+  form#formSearchQuery{
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem;
+  }
+}
+
+@media screen and (max-width:400px){
+  h1 span.assignmentTitle{
+    font-size: 2.1rem;
+  }
+
+  h1 a.geeksterPromo{
     font-size: 1.2rem;
   }
-}
 
-@media screen and (max-width:382px){
-  div#divResults div.wrapperImgAndDescription{
-    width: 17rem;
-    height: 17rem;
+  div#divLaughingBuddha{
+    width:15rem;
+    height: 11rem;
   }
 
-  div#divResults div.wrapperImg{
-    width: 17rem;
-    height: 15rem;
+  h2#h2Joke{
+    font-size:1.7rem;
   }
-
-  div#divResults{
-    padding: 0;
-    grid-template-columns:  17rem;
-    row-gap: 2rem;
-  }
-
-  form.wrapperSearchAndBtn{
-    padding:1rem;
-  }
-
-  h1#topHeading{
-    font-size: 1rem;
-  }
-}
-
-.placeholder\:text-slate-200::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-slate-200::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
-}
-
-.hover\:scale-150:hover {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:cursor-zoom-in:hover {
-  cursor: zoom-in;
 }
 
 .hover\:bg-emerald-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(6 95 70 / var(--tw-bg-opacity));
-}
-
-.hover\:text-red-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
-}
-
-.hover\:ring-2:hover {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.hover\:ring-amber-400:hover {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(251 191 36 / var(--tw-ring-opacity));
-}
-
-.hover\:ring-offset-2:hover {
-  --tw-ring-offset-width: 2px;
 }
 
 .focus\:outline-none:focus {
@@ -1065,11 +817,6 @@ h1{
 .focus\:ring-emerald-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(16 185 129 / var(--tw-ring-opacity));
-}
-
-.focus\:ring-emerald-700:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(4 120 87 / var(--tw-ring-opacity));
 }
 
 .active\:bg-emerald-900:active {

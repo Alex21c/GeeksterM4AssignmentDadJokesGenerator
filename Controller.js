@@ -6,22 +6,11 @@ class Controller{
     this.model = model;
 
     this.formSearchQuery = document.querySelector('form#formSearchQuery');
-    this.inputSearch = document.querySelector('input#inputSearch');
-    this.btnLoadMoreImages = document.querySelector('button#btnLoadMoreImages');
-    this.btnLoadMoreImages.addEventListener('click', (event)=>{
-      let query = this.inputSearch.value.trim();
-      if(query.length>0){
-        this.handleSearchQuery(query, true);
-      }      
-    });
     
     this.formSearchQuery.addEventListener('submit', (event)=>{
       event.preventDefault();
-      // console.log(this.inputSearch.value, 'is the query');
-      let query = this.inputSearch.value.trim();
-      if(query.length>0){
-        this.handleSearchQuery(query);
-      }
+      this.handleJokeRequest();
+
     })
 
     
@@ -29,16 +18,13 @@ class Controller{
 
   }
 
-  async handleSearchQuery(query, keepPhotos=false){
+  async handleJokeRequest(){
     try{
-      let results = await this.model.fetchPhotos(query);
-      if(results.length===0){
-        results=false;
-      }
-      if(!keepPhotos){
-        this.view.clearPhotos();
-      }
-      this.view.appendPhotos(results);
+      this.view.showLoaderImage();
+      let joke = await this.model.fetchJoke();
+      this.view.addNewJoke(joke);
+      // this.view.hideBuddhaImage();
+      this.view.hideLoaderImage();
 
     }catch(error){
       console.error(error);
